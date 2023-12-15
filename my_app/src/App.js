@@ -1,18 +1,24 @@
-import Box from "./Component/Box";
-import CreateContext from "./Component/Context/CreateContext";
 import Header from "./Component/Header";
-import InputBox from "./Component/InputBox";
 import React from "react";
+import ListofPlayers from "./Component/ListofPlayers";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import PlayerDetail from "./Component/PlayerDetail";
+import "./App.css";
 function App() {
-  
   return (
-    <>
+    <div className="App">
       <Header />
-      <div className="container mt-3 w-75">
-        <InputBox />
-       <Box />
-      </div>
-    </>
+      <Router>
+        <Routes>
+          <Route path="/" element={<ListofPlayers />} />
+          <Route path="/player/:id" element={<PlayerDetail />} />
+          <Route
+            path="*"
+            element={<h1 className="notfound">Not Found 404</h1>}
+          />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 

@@ -6,7 +6,12 @@ function Header() {
       <nav className="navbar navbar-light bg-light">
         <div className="container">
           <a className="navbar-brand" href="/">
-            <i>WCC</i>
+            <i
+              style={{ fontSize: "22px" ,
+              textShadow: "1px 1px 5px #000000",
+              fontWeight: "bold",
+            }}
+            >WCC 2023</i>
           </a>
         </div>
       </nav>
